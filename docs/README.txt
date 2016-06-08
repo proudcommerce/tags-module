@@ -8,7 +8,7 @@ OXID eSales AG
 oe
 
 ==Shop Version==
-5.2.x/4.9.x
+6.0.x
 
 ==Version==
 1.0.0
@@ -23,7 +23,7 @@ http://www.oxid-esales.com/
 OE Tags Module
 
 ==Installation==
-Activate the module in administration area.
+See README.rst
 
 ==Extend==
 
@@ -33,4 +33,4 @@ Activate the module in administration area.
 ==Modified original templates==
 
 ==Uninstall==
-Disable the module in administration area and delete module folder.
+See README.rst

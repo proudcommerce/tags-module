@@ -1,6 +1,6 @@
 <?php
 /**
- 
+
  *
  * @category      module
  * @package       tags
@@ -12,6 +12,14 @@
 $sLangName = 'Deutsch';
 
 $aLang = array(
-    'charset'                     => 'ISO-8859-15', // Supports DE chars like: ä, ü, ö, etc.
-
-    );
+    'charset'                         => 'ISO-8859-15', // Supports DE chars like: ä, ü, ö, etc.
+    'DD_SIDEBAR_TAGCLOUD'             => 'Stichwörter',
+    'PAGE_TITLE_OETAGSTAGSCONTROLLER' => 'Tags',
+    'EDIT_TAGS'                       => 'Tags bearbeiten',
+    'ADD_TAGS'                        => 'Tags hinzufügen',
+    'ALREADY_ADDED_TAG'               => 'You already tagged this text',
+    'INVALID_TAGS_REMOVED'            => 'Invalid tags removed',
+    'HIGHLIHGT_TAGS'                  => 'Existierende Tags hervorheben oder neue einfügen',
+    'NO_TAGS'                         => 'Zurzeit keine Tags verfügbar',
+    'TAGS'                            => 'Tags'
+  );
