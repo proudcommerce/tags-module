@@ -9,12 +9,12 @@ a logged in user can add new tags to an article.
 Installation
 ------------
 
-- Make a new folder "oetags" in the **modules/oe/** directory of your shop installation. Download https://github.com/OXID-eSales/tags_module/archive/master.zip and unpack it into this folder. **OR**
+- Make a new folder "oetags" in the **modules/oe/** directory of your shop installation. Download https://github.com/OXIDprojects/tags-module/archive/master.zip and unpack it into this folder. **OR**
 - Git clone the module to your OXID eShop **modules/oe/** directory:
 
   .. code:: bash
 
-     git clone https://github.com/OXID-eSales/tags_module.git oetags
+     git clone https://github.com/OXIDprojects/tags-module.git oetags
 
 - Activate the module in administration panel. The module clears the tmp folder on installation.
 - IMPORTANT: regenerate the views after module installation.
@@ -33,12 +33,12 @@ Important for EE with varnish
 In case you run the module on an EE with reverseProxy enabled (varnish cache) you'll need to install a module addon
 named OE Tags EE ReverseProxy Addon.
 This addon module currently resides in a separate branch in OXID-eSales/tags_module repository.
-To install, make a new folder "oetags_ee" in the **modules/oe/** directory of your shop installation. Download https://github.com/OXID-eSales/tags_module/archive/EE_addon.zip and unpack it into this folder. **OR**
+To install, make a new folder "oetags_ee" in the **modules/oe/** directory of your shop installation. Download https://github.com/OXIDprojects/tags-module/archive/EE_addon.zip and unpack it into this folder. **OR**
 - Git clone the module to your OXID eShop **modules/oe/** directory:
 
   .. code:: bash
 
-     git clone https://github.com/OXID-eSales/tags_module.git oetags_ee
+     git clone https://github.com/OXIDprojects/tags-module.git oetags_ee
      cd oetags_ee
      git checkout EE_addon
 
