@@ -118,8 +118,9 @@ class oetagsArticleTagList extends \oxI18n implements oetagsITagList
         foreach ($tagSet as $tag) {
             $tag->addUnderscores();
         }
-        $tags = oxDb::getInstance()->escapeString($tagSet);
+
         $database = oxDb::getDb();
+        $tags = $tagSet;
 
         $table = getLangTableName('oxartextends', $this->getLanguage());
         $languageSuffix = oxRegistry::getLang()->getLanguageTag($this->getLanguage());
