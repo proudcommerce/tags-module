@@ -19,6 +19,14 @@ Installation
 - Activate the module in administration panel. The module clears the tmp folder on installation.
 - IMPORTANT: regenerate the views after module installation.
 
+Installation with composer
+--------------------------
+
+  .. code:: bash
+
+    composer config repositories.oxid-esales/tags-module vcs https://github.com/OXIDprojects/tags-module
+    composer require oxid-esales/tags-module:dev-master
+
 Uninstallation
 --------------
 
