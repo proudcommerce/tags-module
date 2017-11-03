@@ -5,33 +5,6 @@
 
 require_once __DIR__ . '/../../unit/oeTagsTestCase.php';
 
-use \oxArticleList;
-use \oxAttribute;
-use \oxBase;
-use \oxBasketItem;
-use \oxCategory;
-use \oxContent;
-use \oxDb;
-use \oxEmail;
-use \oxField;
-use \oxGroups;
-use \oxLinks;
-use \oxList;
-use \oxObject2Category;
-use \oxOrderArticle;
-use \oxRegistry;
-use \oxRssFeed;
-use \oxSearch;
-use \oxSelectlist;
-use \oxSeoEncoder;
-use \oxTestModules;
-use \oxUBase;
-use \oxUser;
-use \oxUserBasketItem;
-use \oxUserPayment;
-use \oxUtils;
-use \oxUtilsString;
-
 /**
  * Class Unit_utf8Test
  */

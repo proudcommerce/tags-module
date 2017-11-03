@@ -3,8 +3,6 @@
  * #PHPHEADER_OETAGS_LICENSE_INFORMATION#
  */
 
-use \oxRegistry;
-
 /**
  * Seo encoder for tags.
  *

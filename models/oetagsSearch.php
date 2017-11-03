@@ -3,9 +3,6 @@
  * #PHPHEADER_OETAGS_LICENSE_INFORMATION#
  */
 
-use \oxRegistry;
-use \oxDb;
-
 /**
  * Implements search
  *

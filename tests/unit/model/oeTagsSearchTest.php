@@ -6,7 +6,6 @@
 require_once __DIR__ . '/../oeTagsTestCase.php';
 
 use OxidEsales\Eshop\Core\Registry;
-use OxidEsales\Eshop\Core\Database;
 use OxidEsales\TestingLibrary\UnitTestCase;
 use OxidEsales\Eshop\Core\TableViewNameGenerator;
 
@@ -40,7 +39,7 @@ class oeTagsSearchTest extends oeTagsTestCase
      */
     protected function tearDown()
     {
-        $myDB = Database::getDb();
+        $myDB = \OxidEsales\Eshop\Core\DatabaseProvider::getDb();
         $myDB->execute('delete from oxselectlist where oxid = "oxsellisttest" ');
         $myDB->execute('delete from oxobject2selectlist where oxselnid = "oxsellisttest" ');
         $this->cleanUpTable('oxcategories');

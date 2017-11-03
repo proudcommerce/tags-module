@@ -5,14 +5,6 @@
 
 require_once __DIR__ . '/../../oeTagsTestCase.php';
 
-use \oxCategory;
-use \oxField;
-use \oxDb;
-use \oxManufacturer;
-use \oxRegistry;
-use \oxTestModules;
-use \oxVendor;
-
 /**
  * Tests for Article_Seo class
  */

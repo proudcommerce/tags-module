@@ -5,10 +5,6 @@
 
 require_once __DIR__ . '/../oeTagsTestCase.php';
 
-use \oxDb;
-use \oxRegistry;
-use \oxTestModules;
-
 /**
  * Testing oetagsSeoEncoderTag class
  */

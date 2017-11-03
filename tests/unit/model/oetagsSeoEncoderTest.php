@@ -20,14 +20,6 @@
  * @version       OXID eShop CE
  */
 
-use \modDB;
-use \oxSeoEncoder;
-use \oxField;
-use \oxDb;
-use \oxRegistry;
-use \oxSeoEncoderHelper;
-use \oxTestModules;
-
 require_once __DIR__ . '/../oeTagsTestCase.php';
 
 class modSeoEncoder extends oxSeoEncoder

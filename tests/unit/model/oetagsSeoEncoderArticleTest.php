@@ -5,13 +5,6 @@
 
 require_once __DIR__ . '/../oeTagsTestCase.php';
 
-use \modDB;
-use \oxSeoEncoderArticle;
-use \oxField;
-use \oxDb;
-use \oxRegistry;
-use \oxTestModules;
-
 /**
  *
  */

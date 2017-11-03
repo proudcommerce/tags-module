@@ -5,7 +5,6 @@
 
 require_once __DIR__ . '/../oeTagsTestCase.php';
 
-use \oxRegistry;
 
 class Unit_Controller_oetagsTagsControllerTest extends \oeTagsTestCase
 {

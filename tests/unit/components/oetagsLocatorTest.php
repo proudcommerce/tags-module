@@ -5,14 +5,6 @@
 
 require_once __DIR__ . '/../oeTagsTestCase.php';
 
-use \oxArticle;
-use \oxLocator;
-use \oxField;
-use \oxlist;
-use \oxDb;
-use \oxRegistry;
-use \oxTestModules;
-
 class testOeTagsLocator extends oxLocator
 {
 

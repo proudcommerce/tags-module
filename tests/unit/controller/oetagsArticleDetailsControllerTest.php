@@ -5,16 +5,6 @@
 
 require_once __DIR__ . '/../oeTagsTestCase.php';
 
-use \oxarticle;
-use \oxarticlelist;
-use \oxpaymentlist;
-use \oxdeliverysetlist;
-use \oxDeliveryList;
-use \oxField;
-use \oxDb;
-use \oxRegistry;
-use \oxTestModules;
-
 /**
  * Testing details class
  */

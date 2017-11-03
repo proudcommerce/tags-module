@@ -3,10 +3,6 @@
  * #PHPHEADER_OETAGS_LICENSE_INFORMATION#
  */
 
-use \oxRegistry;
-use \oxSeoEncoderRecomm;
-use \oxSeoEncoderCategory;
-
 /**
  * Locator controller for: category, vendor, manufacturers and search lists.
  */

@@ -5,10 +5,6 @@
 
 require_once __DIR__ . '/../oeTagsTestCase.php';
 
-use \oxField;
-use \oxRegistry;
-use \oxTestModules;
-
 /**
  * Testing tag class
  */
