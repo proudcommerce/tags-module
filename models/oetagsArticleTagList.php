@@ -120,7 +120,7 @@ class oetagsArticleTagList extends \oxI18n implements oetagsITagList
         }
 
         $database = oxDb::getDb();
-        $tags = $tagSet;
+        $tags = $tagSet; 
 
         $table = getLangTableName('oxartextends', $this->getLanguage());
         $languageSuffix = oxRegistry::getLang()->getLanguageTag($this->getLanguage());
