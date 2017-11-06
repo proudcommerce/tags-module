@@ -3,8 +3,6 @@
  * #PHPHEADER_OETAGS_LICENSE_INFORMATION#
  */
 
-require_once __DIR__ . '/../oeTagsTestCase.php';
-
 class Unit_Model_oetagsArticleTagListTest extends \oeTagsTestCase
 {
 

@@ -3,10 +3,8 @@
  * #PHPHEADER_OETAGS_LICENSE_INFORMATION#
  */
 
-use OxidEsales\TestingLibrary\AcceptanceTestCase;
-
 /** Frontend: product information/ details related tests */
-class ProductInfoFrontendTest extends  AcceptanceTestCase
+class ProductInfoFrontendTest extends \OxidEsales\EshopCommunity\Tests\Acceptance\AdminTestCase
 {
     protected function setUp()
     {

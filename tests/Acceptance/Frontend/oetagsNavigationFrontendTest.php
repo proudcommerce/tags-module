@@ -4,7 +4,7 @@
  */
 
 /** Selenium tests for new layout. */
-class oetagsNavigationFrontendTest extends AcceptanceTestCase
+class oetagsNavigationFrontendTest extends \OxidEsales\EshopCommunity\Tests\Acceptance\AdminTestCase
 {
 
     protected function setUp()
