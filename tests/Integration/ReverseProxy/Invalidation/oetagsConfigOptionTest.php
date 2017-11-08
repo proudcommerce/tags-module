@@ -3,9 +3,7 @@
  * #PHPHEADER_OETAGS_LICENSE_INFORMATION#
  */
 
-use \oxDb;
 use OxidEsales\TestingLibrary\UnitTestCase;
-use \oxRegistry;
 
 require_once __DIR__ . '/../oetagsCacheTestCase.php';
 

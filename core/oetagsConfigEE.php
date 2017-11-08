@@ -3,14 +3,11 @@
  * #PHPHEADER_OETAGS_LICENSE_INFORMATION#
  */
 
-use \oxDb;
 use OxidEsales\Eshop\Core\Edition\EditionPathProvider;
 use OxidEsales\Eshop\Core\Edition\EditionRootPathProvider;
 use OxidEsales\Eshop\Core\Edition\EditionSelector;
 use OxidEsales\Eshop\Core\FileSystem\FileSystem;
 use OxidEsales\EshopEnterprise\Core\Cache\ReverseProxy\ReverseProxyBackend;
-use \oxRegistry;
-use \oxShop;
 
 /**
  * Main shop configuration class.
