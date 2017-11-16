@@ -3,9 +3,7 @@
  * #PHPHEADER_OETAGS_LICENSE_INFORMATION#
  */
 
-use \oxDb;
 use \PHPUnit_Framework_MockObject_MockObject as MockObject;
-use \oxTestModules;
 
 /**
  * Tests oxReverseProxyBackEnd

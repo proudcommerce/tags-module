@@ -3,11 +3,8 @@
  * #PHPHEADER_OETAGS_LICENSE_INFORMATION#
  */
 
-use \oxDb;
-use \oxField;
 use OxidEsales\EshopEnterprise\Core\Cache\ReverseProxy\ReverseProxyBackend;
 use OxidEsales\TestingLibrary\UnitTestCase;
-use \oxRegistry;
 
 require_once __DIR__ . '/../oetagsCacheTestCase.php';
 

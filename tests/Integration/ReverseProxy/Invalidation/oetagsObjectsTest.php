@@ -3,10 +3,7 @@
  * #PHPHEADER_OETAGS_LICENSE_INFORMATION#
  */
 
-use \oxDb;
-use \oxField;
 use OxidEsales\EshopEnterprise\Core\Cache\ReverseProxy\ReverseProxyBackend;
-use \oxRegistry;
 
 require_once __DIR__ . '/../oetagsCacheTestCase.php';
 
@@ -104,55 +101,6 @@ class oetagsObjectsTest extends oetagsCacheTestCase
                     '/',
                     '/seo/home.*',
                     '/widget.php?.*action=oxactionid.*cl=oxwactions.*'
-                )
-            ),
-            // Content
-            array(
-                'oxContent',
-                'oxcontentid',
-                array(
-                    '/seo/content.*',
-                    '/widget.php?.*cl=oxwinformationlist.*',
-                    '/widget.php?.*cl=oxwcategorytree.*'
-                )
-            ),
-            // Country
-            array(
-                'oxCountry',
-                'oxcountryid',
-                array(
-                    '/seo/register.*'
-                )
-            ),
-            // Links
-            array(
-                'oxLinks',
-                'oxlinkid',
-                array(
-                    '/seo/links.*'
-                )
-            ),
-            // News
-            array(
-                'oxNews',
-                'oxnewid',
-                array(
-                    '/',
-                    '/seo/new.*',
-                    '/seo/home.*'
-                )
-            ),
-            // Discount
-            array(
-                'oxDiscount',
-                'oxdiscountid',
-                array(
-                    '/',
-                    '/index.php?.*cl=search.*',
-                    '/seo/category.*',
-                    '/seo/home.*',
-                    '/seo/manufacturer.*',
-                    '/seo/vendor.*',
                 )
             ),
             // SubShop
