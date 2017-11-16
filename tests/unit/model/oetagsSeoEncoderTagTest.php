@@ -3,12 +3,6 @@
  * #PHPHEADER_OETAGS_LICENSE_INFORMATION#
  */
 
-require_once __DIR__ . '/../oeTagsTestCase.php';
-
-use \oxDb;
-use \oxRegistry;
-use \oxTestModules;
-
 /**
  * Testing oetagsSeoEncoderTag class
  */
@@ -61,10 +55,11 @@ class Unit_Model_SeoEncoderTagTest extends \oeTagsTestCase
         $sAltTag = $this->getTestConfig()->getShopEdition() == 'EE' ? 'grilltonne' : 'authentisches';
 
         $oSeoEncoderTag = oxNew('oetagsSeoEncoderTag');
-        $this->assertEquals($sUrl . "oetagstagcontroller/{$sTag}/16/", $oSeoEncoderTag->getTagPageUrl($sTag, 15));
-        $this->assertEquals($sUrl . "oetagstagcontroller/{$sTag}/16/", $oSeoEncoderTag->getTagPageUrl($sTag, 15));
+        $this->assertEquals($sUrl . "oetagstagcontroller/{$sTag}/", $oSeoEncoderTag->getTagPageUrl($sTag, 0));
+        $this->assertEquals($sUrl . "oetagstagcontroller/{$sTag}/?pgNr=1", $oSeoEncoderTag->getTagPageUrl($sTag, 1));
+        $this->assertEquals($sUrl . "oetagstagcontroller/{$sTag}/?pgNr=15", $oSeoEncoderTag->getTagPageUrl($sTag, 15));
 
-        $this->assertEquals($sUrl . "oetagstagcontroller/{$sAltTag}/14/", $oSeoEncoderTag->getTagPageUrl($sAltTag, 13));
+        $this->assertEquals($sUrl . "oetagstagcontroller/{$sAltTag}/?pgNr=13", $oSeoEncoderTag->getTagPageUrl($sAltTag, 13));
     }
 
     /**

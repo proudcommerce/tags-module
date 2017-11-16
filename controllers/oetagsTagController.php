@@ -20,10 +20,6 @@
  * @version   OXID eShop CE
  */
 
-use \oxField;
-use \oxRegistry;
-use \oxUBase;
-
 /**
  * Tag filter for articles
  *

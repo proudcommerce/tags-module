@@ -3,14 +3,6 @@
  * #PHPHEADER_OETAGS_LICENSE_INFORMATION#
  */
 
-require_once __DIR__ . '/../oeTagsTestCase.php';
-
-use \oxArticle;
-use \oxArticleList;
-use \oxField;
-use \oxDb;
-use \oxTestModules;
-
 /**
  * Tests for oxwArticleBox class
  */

@@ -3,8 +3,6 @@
  * #PHPHEADER_OETAGS_LICENSE_INFORMATION#
  */
 
-use \oxRegistry;
-
 /**
  * Seo encoder for tags.
  *
@@ -129,12 +127,16 @@ class oetagsSeoEncoderTag extends \oxSeoEncoder
         if (!isset($languageId)) {
             $languageId = oxRegistry::getLang()->getBaseLanguage();
         }
-        $stdUrl = $this->getStdTagUri($tag) . '&amp;pgNr=' . $pageNumber;
-        $parameters = (int) ($pageNumber + 1);
+        $stdUrl = $this->getStdTagUri($tag);
+        $parameters = null;
 
         $stdUrl = $this->_trimUrl($stdUrl, $languageId);
-        $seoUrl = $this->getTagUri($tag, $languageId) . $parameters . "/";
+        $seoUrl = $this->getTagUri($tag, $languageId);
 
-        return $this->_getFullUrl($this->_getDynamicTagUri($stdUrl, $seoUrl, $languageId), $languageId);
+        $postfix = (int) $pageNumber > 0 ? 'pgNr=' . (int) $pageNumber : '';
+        $fullUrl = $this->_getFullUrl($this->_getDynamicTagUri($stdUrl, $seoUrl, $languageId), $languageId);
+        $fullUrl = (!empty($postfix)) ? \OxidEsales\Eshop\Core\Registry::getUtilsUrl()->appendParamSeparator($fullUrl) . $postfix : $fullUrl;
+
+        return $fullUrl;
     }
 }

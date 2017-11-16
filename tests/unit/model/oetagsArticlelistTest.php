@@ -3,11 +3,6 @@
  * #PHPHEADER_OETAGS_LICENSE_INFORMATION#
  */
 
-require_once __DIR__ . '/../oeTagsTestCase.php';
-
-use \modDB;
-use \oxTestModules;
-
 /**
  * Testing oxArticleList class
  */

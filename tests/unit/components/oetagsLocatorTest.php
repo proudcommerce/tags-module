@@ -3,16 +3,6 @@
  * #PHPHEADER_OETAGS_LICENSE_INFORMATION#
  */
 
-require_once __DIR__ . '/../oeTagsTestCase.php';
-
-use \oxArticle;
-use \oxLocator;
-use \oxField;
-use \oxlist;
-use \oxDb;
-use \oxRegistry;
-use \oxTestModules;
-
 class testOeTagsLocator extends oxLocator
 {
 
@@ -171,7 +161,6 @@ class Unit_Components_oetagsLocatorTest extends oeTagsTestCase
         $oLocatorTarget->expects($this->any())->method('getCatTreePath');
         $oLocatorTarget->expects($this->once())->method('getActiveCategory')->will($this->returnValue($oCategory));
         $oLocatorTarget->expects($this->once())->method('getCategoryTree')->will($this->returnValue(oxNew('oxcategorylist')));
-        $oLocatorTarget->expects($this->once())->method('showSorting')->will($this->returnValue(true));
         $oLocatorTarget->expects($this->any())->method('getLinkType')->will($this->returnValue(OXARTICLE_LINKTYPE_CATEGORY));
 
         $oLocator = oxNew('testOeTagsLocator');
@@ -208,7 +197,6 @@ class Unit_Components_oetagsLocatorTest extends oeTagsTestCase
         $oLocatorTarget->expects($this->any())->method('getCatTreePath');
         $oLocatorTarget->expects($this->once())->method('getActiveCategory')->will($this->returnValue($oCategory));
         $oLocatorTarget->expects($this->once())->method('getCategoryTree')->will($this->returnValue(oxNew('oxcategorylist')));
-        $oLocatorTarget->expects($this->once())->method('showSorting')->will($this->returnValue(true));
         $oLocatorTarget->expects($this->any())->method('getLinkType')->will($this->returnValue(OXARTICLE_LINKTYPE_CATEGORY));
 
         $oConfig = $this->getMock('oxconfig', array('getConfigParam'));
@@ -223,11 +211,11 @@ class Unit_Components_oetagsLocatorTest extends oeTagsTestCase
         $sShopUrl = $this->getConfig()->getShopUrl();
 
         if ($this->getTestConfig()->getShopEdition() == 'EE') {
-            $sToListLink = $sShopUrl . 'Party/3/';
+            $sToListLink = $sShopUrl . 'Party/?pgNr=2';
             $sPrevProdLink = $sShopUrl . 'Party/Bar-Equipment/Kuehlwuerfel-NORDIC-ROCKS-Eiswuerfel-Ersatz.html';
             $sNextProdLink = $sShopUrl . 'Party/Schuerze-BAVARIA.html';
         } else {
-            $sToListLink = $sShopUrl . 'Geschenke/9/';
+            $sToListLink = $sShopUrl . 'Geschenke/?pgNr=8';
             $sNextProdLink = $sShopUrl . 'Geschenke/Wohnen/Uhren/Wanduhr-PHOTOFRAME.html';
             $sPrevProdLink = $sShopUrl . 'Geschenke/Bar-Equipment/Champagnerverschluss-GOLF.html';
         }
@@ -270,7 +258,6 @@ class Unit_Components_oetagsLocatorTest extends oeTagsTestCase
         $oLocatorTarget->expects($this->any())->method('setCatTreePath');
         $oLocatorTarget->expects($this->any())->method('getCatTreePath');
         $oLocatorTarget->expects($this->once())->method('getActVendor')->will($this->returnValue($oVendor));
-        $oLocatorTarget->expects($this->once())->method('showSorting')->will($this->returnValue(true));
         $oLocatorTarget->expects($this->any())->method('getLinkType')->will($this->returnValue(OXARTICLE_LINKTYPE_VENDOR));
 
         $oLocator = oxNew('testOeTagsLocator');
@@ -307,7 +294,6 @@ class Unit_Components_oetagsLocatorTest extends oeTagsTestCase
         $oLocatorTarget->expects($this->any())->method('setCatTreePath');
         $oLocatorTarget->expects($this->any())->method('getCatTreePath');
         $oLocatorTarget->expects($this->once())->method('getActVendor')->will($this->returnValue($oVendor));
-        $oLocatorTarget->expects($this->once())->method('showSorting')->will($this->returnValue(true));
         $oLocatorTarget->expects($this->any())->method('getLinkType')->will($this->returnValue(OXARTICLE_LINKTYPE_VENDOR));
 
         $oLocator = oxNew('testOeTagsLocator');
@@ -321,7 +307,7 @@ class Unit_Components_oetagsLocatorTest extends oeTagsTestCase
         $this->assertEquals($expectedCount, $oVendor->iCntOfProd);
 
         if ($this->getTestConfig()->getShopEdition() == 'EE') {
-            $sToListLink = $sShopUrl . 'Nach-Lieferant/Hersteller-1/2/';
+            $sToListLink = $sShopUrl . 'Nach-Lieferant/Hersteller-1/?pgNr=1';
             $sPrevProdLink = $sShopUrl . 'Nach-Lieferant/Hersteller-1/Flaschenverschluss-EGO.html';
             $sNextProdLink = $sShopUrl . 'Nach-Lieferant/Hersteller-1/Champagnerverschluss-GOLF.html';
         } else {
@@ -366,7 +352,6 @@ class Unit_Components_oetagsLocatorTest extends oeTagsTestCase
         $oLocatorTarget->expects($this->any())->method('getCatTreePath');
         $oLocatorTarget->expects($this->once())->method('getActManufacturer')->will($this->returnValue($oManufacturer));
         $oLocatorTarget->expects($this->once())->method('getManufacturerTree')->will($this->returnValue(oxNew('oxmanufacturerlist')));
-        $oLocatorTarget->expects($this->once())->method('showSorting')->will($this->returnValue(true));
         $oLocatorTarget->expects($this->any())->method('getLinkType')->will($this->returnValue(OXARTICLE_LINKTYPE_MANUFACTURER));
 
         $oLocator = oxNew('testOeTagsLocator');
@@ -404,7 +389,6 @@ class Unit_Components_oetagsLocatorTest extends oeTagsTestCase
         $oLocatorTarget->expects($this->any())->method('getCatTreePath');
         $oLocatorTarget->expects($this->once())->method('getActManufacturer')->will($this->returnValue($oManufacturer));
         $oLocatorTarget->expects($this->once())->method('getManufacturerTree')->will($this->returnValue(oxNew('oxmanufacturerlist')));
-        $oLocatorTarget->expects($this->once())->method('showSorting')->will($this->returnValue(true));
         $oLocatorTarget->expects($this->any())->method('getLinkType')->will($this->returnValue(OXARTICLE_LINKTYPE_MANUFACTURER));
 
         $oLocator = oxNew('testOeTagsLocator');
@@ -418,7 +402,7 @@ class Unit_Components_oetagsLocatorTest extends oeTagsTestCase
         $this->assertEquals($expectedCount, $oManufacturer->iCntOfProd);
 
         if ($this->getTestConfig()->getShopEdition() == 'EE') {
-            $sToListLink = $sShopUrl . 'Nach-Hersteller/Hersteller-1/2/';
+            $sToListLink = $sShopUrl . 'Nach-Hersteller/Hersteller-1/?pgNr=1';
             $sPrevProdLink = $sShopUrl . 'Nach-Hersteller/Hersteller-1/Flaschenverschluss-EGO.html';
             $sNextProdLink = $sShopUrl . 'Nach-Hersteller/Hersteller-1/Champagnerverschluss-GOLF.html';
         } else {
@@ -456,7 +440,6 @@ class Unit_Components_oetagsLocatorTest extends oeTagsTestCase
         $oLocatorTarget->expects($this->any())->method('addTplParam');
         $oLocatorTarget->expects($this->any())->method('setSearchTitle');
         $oLocatorTarget->expects($this->any())->method('getSearchTitle');
-        $oLocatorTarget->expects($this->once())->method('showSorting')->will($this->returnValue(true));
         $oLocatorTarget->expects($this->any())->method('getLinkType')->will($this->returnValue(OXARTICLE_LINKTYPE_CATEGORY));
 
         $this->setRequestParameter("searchparam", 'Bier');
@@ -502,7 +485,6 @@ class Unit_Components_oetagsLocatorTest extends oeTagsTestCase
         $oLocatorTarget->expects($this->any())->method('addTplParam');
         $oLocatorTarget->expects($this->any())->method('setSearchTitle');
         $oLocatorTarget->expects($this->any())->method('getSearchTitle');
-        $oLocatorTarget->expects($this->once())->method('showSorting')->will($this->returnValue(true));
         $oLocatorTarget->expects($this->any())->method('getLinkType')->will($this->returnValue(OXARTICLE_LINKTYPE_CATEGORY));
 
         $sSearchVendor = $this->getTestConfig()->getShopEdition() == 'EE'? 'd2e44d9b31fcce448.08890330' : '68342e2955d7401e6.18967838';
@@ -541,7 +523,6 @@ class Unit_Components_oetagsLocatorTest extends oeTagsTestCase
         $oLocatorTarget->expects($this->any())->method('addTplParam');
         $oLocatorTarget->expects($this->any())->method('setSearchTitle');
         $oLocatorTarget->expects($this->any())->method('getSearchTitle');
-        $oLocatorTarget->expects($this->once())->method('showSorting')->will($this->returnValue(true));
         $oLocatorTarget->expects($this->any())->method('getLinkType')->will($this->returnValue(OXARTICLE_LINKTYPE_CATEGORY));
 
 

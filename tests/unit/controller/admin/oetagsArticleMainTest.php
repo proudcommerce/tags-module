@@ -3,17 +3,6 @@
  * #PHPHEADER_OETAGS_LICENSE_INFORMATION#
  */
 
-use \oxArticle;
-use \oxCategoryList;
-use \oxField;
-use \oxDb;
-use \oxManufacturerList;
-use \oxTestModules;
-use \oxUtilsObject;
-use \oxVendorList;
-
-require_once __DIR__ . '/../../oeTagsTestCase.php';
-
 /**
  * Tests for Article_Main class
  */

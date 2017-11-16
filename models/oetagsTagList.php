@@ -77,9 +77,13 @@ class oeTagsTagList extends \oxI18n implements oetagsITagList
         $oRs = $oDb->select($sQ);
 
         $this->get()->clear();
-        while ($oRs && $oRs->recordCount() && !$oRs->EOF) {
-            $this->_addTagsFromDb($oRs->fields['oetags']);
-            $oRs->moveNext();
+        //Fetch the results row by row
+        if ($oRs != false && $oRs->count() > 0) {
+            while (!$oRs->EOF) {
+                $row = $oRs->getFields();
+                $this->_addTagsFromDb($row['oetags']);
+                $oRs->fetchRow();
+            }
         }
 
         return $this->_isLoaded = true;

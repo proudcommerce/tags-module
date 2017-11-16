@@ -3,11 +3,8 @@
  * #PHPHEADER_OETAGS_LICENSE_INFORMATION#
  */
 
-use \oxDb;
-use OxidEsales\TestingLibrary\AcceptanceTestCase;
-
 /** Selenium tests for new layout. */
-class oetagsNavigationFrontendTest extends AcceptanceTestCase
+class oetagsNavigationFrontendTest extends \OxidEsales\EshopCommunity\Tests\Acceptance\AdminTestCase
 {
 
     protected function setUp()

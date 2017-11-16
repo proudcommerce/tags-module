@@ -3,10 +3,8 @@
  * #PHPHEADER_OETAGS_LICENSE_INFORMATION#
  */
 
-use OxidEsales\Eshop\Tests\Acceptance\AdminTestCase;
-
 /** Creating and deleting items. */
-class oetagsCreatingItemsAdminTest extends AdminTestCase
+class oetagsCreatingItemsAdminTest extends \OxidEsales\EshopCommunity\Tests\Acceptance\AdminTestCase
 {
     protected function setUp()
     {

@@ -3,7 +3,7 @@
  * #PHPHEADER_OETAGS_LICENSE_INFORMATION#
  */
 
-abstract class oeTagsTestCase extends \OxidTestCase
+abstract class oeTagsTestCase extends \OxidEsales\TestingLibrary\UnitTestCase
 {
     /**
      * Fixture set up.

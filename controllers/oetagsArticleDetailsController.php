@@ -3,16 +3,6 @@
  * #PHPHEADER_OETAGS_LICENSE_INFORMATION#
  */
 
-use \oxArticle;
-use \oxArticleList;
-use \oxCategory;
-use \oxDeliveryList;
-use \oxDeliverySetList;
-use \oxPaymentList;
-use \oxRegistry;
-use \oxField;
-use \oxVariantSelectList;
-
 /**
  * Article details information page.
  * Collects detailed article information, possible variants, such information

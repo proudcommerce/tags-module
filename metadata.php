@@ -6,7 +6,7 @@
  * @package       tags
  * @author        OXID eSales AG
  * @link          http://www.oxid-esales.com/
- * @copyright (C) OXID eSales AG 2003-20162016
+ * @copyright (C) OXID eSales AG 2003-2016
  */
 
 /**
@@ -28,7 +28,7 @@ $aModule = array(
         'en' => 'OE Tags Module',
     ),
     'thumbnail'   => 'out/pictures/picture.png',
-    'version'     => '1.0.0',
+    'version'     => '2.0.0',
     'author'      => 'OXID eSales AG',
     'url'         => 'http://www.oxid-esales.com/',
     'email'       => '',
@@ -43,7 +43,9 @@ $aModule = array(
                            'oxviewconfig' => 'oe/oetags/core/oetagsViewConfig',
                            'oxutilscount' => 'oe/oetags/core/oetagsUtilsCount',
                            'oxlocator' => 'oe/oetags/components/oetagsLocator',
-                           'oxarticle' => 'oe/oetags/models/oetagsArticle'
+                           'oxarticle' => 'oe/oetags/models/oetagsArticle',
+                           'oxcmp_basket' => 'oe/oetags/components/oetagsBasketComponent',
+                           'oxcmp_categories' => 'oe/oetags/components/oetagsCategoriesComponent'
             ),
     'files'       => array(
         'oetagsitaglist' => 'oe/oetags/core/contract/oetagsITagList.php',
@@ -56,7 +58,7 @@ $aModule = array(
         'oetagsArticleTagList' => 'oe/oetags/models/oetagsArticleTagList.php',
         'oetagsTagCloudWidget' => 'oe/oetags/components/widgets/oetagsTagCloudWidget.php',
         'oetagsTagController' => 'oe/oetags/controllers/oetagsTagController.php',
-        'oetagsTagsController' => 'oe/oetags/controllers/oetagsTagsController.php',
+        'oetagsTagsController' => 'oe/oetags/controllers/oetagsTagsController.php'
     ),
     'templates'   => array('widget/sidebar/tags.tpl' => 'oe/oetags/views/widgets/sidebar/tags.tpl',
                            'page/details/inc/tags.tpl' => 'oe/oetags/views/azure/tpl/page/details/inc/tags.tpl',

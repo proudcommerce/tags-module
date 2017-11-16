@@ -6,20 +6,20 @@
  * @package       tags
  * @author        OXID eSales AG
  * @link          http://www.oxid-esales.com/
- * @copyright (C) OXID eSales AG 2003-20162016
+ * @copyright (C) OXID eSales AG 2003-2016
  */
 
 $sLangName = 'Deutsch';
 
 $aLang = array(
-    'charset'                         => 'ISO-8859-15', // Supports DE chars like: ä, ü, ö, etc.
-    'DD_SIDEBAR_TAGCLOUD'             => 'Stichwörter',
+    'charset'                         => 'UTF-8',
+    'DD_SIDEBAR_TAGCLOUD'             => 'StichwÃ¶rter',
     'PAGE_TITLE_OETAGSTAGSCONTROLLER' => 'Tags',
     'EDIT_TAGS'                       => 'Tags bearbeiten',
-    'ADD_TAGS'                        => 'Tags hinzufügen',
+    'ADD_TAGS'                        => 'Tags hinzufÃ¼gen',
     'ALREADY_ADDED_TAG'               => 'You already tagged this text',
     'INVALID_TAGS_REMOVED'            => 'Invalid tags removed',
-    'HIGHLIHGT_TAGS'                  => 'Existierende Tags hervorheben oder neue einfügen',
-    'NO_TAGS'                         => 'Zurzeit keine Tags verfügbar',
+    'HIGHLIHGT_TAGS'                  => 'Existierende Tags hervorheben oder neue einfÃ¼gen',
+    'NO_TAGS'                         => 'Zurzeit keine Tags verfÃ¼gbar',
     'TAGS'                            => 'Tags'
   );
