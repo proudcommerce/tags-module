@@ -24,8 +24,7 @@ Installation with composer
 
   .. code:: bash
 
-    composer config repositories.oxid-esales/tags-module vcs https://github.com/OXIDprojects/tags-module
-    composer require oxid-esales/tags-module:dev-master
+    composer require oxid-projects/tags-module
 
 Uninstallation
 --------------
