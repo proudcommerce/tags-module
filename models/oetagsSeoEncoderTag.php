@@ -22,7 +22,8 @@ class oetagsSeoEncoderTag extends \oxSeoEncoder
      */
     public function getTagUri($tag, $languageId = null)
     {
-        return $this->_getDynamicTagUri($this->getStdTagUri($tag), "oetagstagcontroller/{$tag}/", $languageId);
+        $uri = $this->getConfig()->getConfigParam('oetagsUri');
+        return $this->_getDynamicTagUri($this->getStdTagUri($tag), "{$uri}/{$tag}/", $languageId);
     }
 
     /**
@@ -43,22 +44,20 @@ class oetagsSeoEncoderTag extends \oxSeoEncoder
         $seoUrl = $this->_prepareUri($this->addLanguageParam($seoUrl, $languageId), $languageId);
 
         //load details link from DB
-        $oldSeoUrl = $this->_loadFromDb('dynamic', $objectId, $languageId);
-        if ($oldSeoUrl === $seoUrl) {
-            $seoUrl = $oldSeoUrl;
-        } else {
-            if ($oldSeoUrl) {
+        $seoUrlFromDbOld = $this->_loadFromDb('dynamic', $objectId, $languageId);
+        $processedSeoUrl= $this->_processSeoUrl($seoUrl, $objectId, $languageId);
+        if(!$seoUrlFromDbOld) {
+            $this->_saveToDb('dynamic', $objectId, $stdUrl, $processedSeoUrl, $languageId, $shopId);
+        }
+        else {
+            if($seoUrlFromDb !== $processedSeoUrl) {
                 // old must be transferred to history
                 $this->_copyToHistory($objectId, $shopId, $languageId, 'dynamic');
+                $this->_saveToDb('dynamic', $objectId, $stdUrl, $processedSeoUrl, $languageId, $shopId);
             }
-            // creating unique
-            $seoUrl = $this->_processSeoUrl($seoUrl, $objectId, $languageId);
-
-            // inserting
-            $this->_saveToDb('dynamic', $objectId, $stdUrl, $seoUrl, $languageId, $shopId);
         }
 
-        return $seoUrl;
+        return $processedSeoUrl;
     }
 
     /**
