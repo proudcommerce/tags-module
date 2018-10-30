@@ -50,7 +50,7 @@ class oetagsSeoEncoderTag extends \oxSeoEncoder
             $this->_saveToDb('dynamic', $objectId, $stdUrl, $processedSeoUrl, $languageId, $shopId);
         }
         else {
-            if($seoUrlFromDb !== $processedSeoUrl) {
+            if($seoUrlFromDbOld !== $processedSeoUrl) {
                 // old must be transferred to history
                 $this->_copyToHistory($objectId, $shopId, $languageId, 'dynamic');
                 $this->_saveToDb('dynamic', $objectId, $stdUrl, $processedSeoUrl, $languageId, $shopId);
