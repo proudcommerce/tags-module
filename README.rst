@@ -56,8 +56,8 @@ Upgrade
 --------------
 If you upgrade from OXID 4, note:
 
-1. Install module, if already installed we need to save settings again.
-2. Delete all dynmaic seo urls (this will also regenerated rss urls):
+1. Install module (in v6 the tag functionality was removed), then we need to save settings again.
+2. Delete all dynamic seo urls (this will also regenerated rss urls):
 
     DELETE FROM oxseo WHERE `OXTYPE` = 'dynamic'
 
