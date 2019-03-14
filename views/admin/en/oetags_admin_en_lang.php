@@ -21,6 +21,7 @@ $aLang = array(
     'OETAGS_HELP_SHOP_CONFIG_SHOWTAGS' => 'If not checked, no tags will be displayed in eShop. Pages that could be called via tag URL, are not accessible.',
     'SHOP_MODULE_oetagsShowTags'       => 'Display tags in eShop',
     'SHOP_MODULE_oetagsSeparator'      => 'Separator',
+    'SHOP_MODULE_oetagsUri'            => 'Url segment for single tag',
     'GENERAL_SEO_TAG'                  => '-- Tags --',
     'ARTICLE_MAIN_INVALIDTAGSFOUND'    => 'Attention: Invalid tags removed',
 );

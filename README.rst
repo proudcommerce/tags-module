@@ -52,6 +52,20 @@ To install, make a new folder "oetags_ee" in the **modules/oe/** directory of yo
 - Activate the module alongside the OE Tags module. Flush varnish cache and clear tmp directory manually.
 - Deactivate when you deactivate the OE Tags module.
 
+Upgrade
+--------------
+If you upgrade from OXID 4, note:
+
+1. Install module (in v6 the tag functionality was removed), then we need to save settings again.
+2. Delete all dynamic seo urls (this will also regenerated rss urls):
+
+    DELETE FROM oxseo WHERE `OXTYPE` = 'dynamic'
+
+3. If you want to rename the default tags url part: rename "stichworte" to "tags" or anything you would like to in the modules section.
+4. Clear cache.
+5. Call homepage, this will regenerate all dynamic SEO Urls, also the tag urls.
+6. Regenerate views.
+
 License
 -------
 
@@ -62,4 +76,3 @@ software being subject to GNU GPL can be found under http://www.gnu.org/licenses
 Professional Edition and Enterprise Edition is released under commercial license. OXID eSales AG has the sole rights to
 the software. Decompiling the source code, unauthorized copying as well as distribution to third parties is not
 permitted. Infringement will be reported to the authorities and prosecuted without exception.
-
