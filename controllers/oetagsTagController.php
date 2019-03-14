@@ -88,7 +88,7 @@ class oetagsTagController extends \AList
         $oArticleList = $this->getArticleList();
 
         // if tags are off or no articles - showing 404 header (#2139)
-        if (!$this->getViewConfig()->showTags($this) || !$oArticleList) {
+        if (!$this->getViewConfig()->showTags($this) || !$oArticleList || count($oArticleList) <= 0) {
             error_404_handler();
         }
 
