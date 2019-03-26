@@ -77,7 +77,7 @@ class oeTagsTagSet extends \oxSuperCfg implements Iterator
     /**
      * Returns article tags set string
      *
-     * @return string;
+     * @return array;
      */
     public function getInvalidTags()
     {
