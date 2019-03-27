@@ -21,7 +21,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [2.0.2] - 2019-19-03
 
+### Added
+- gitattributes with excluded tests
 ### Fixed
+- fixed code inspections issues
 - fix empty articleList, articleList will not be null but an empty ArticleList
 - fixed oetagscontroller urls by adding config option for SEO url for a single tag page
 - fixed translations

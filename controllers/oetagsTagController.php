@@ -173,6 +173,7 @@ class oetagsTagController extends \AList
      */
     public function generatePageNavigationUrl()
     {
+        $sLink = null;
         if ((oxRegistry::getUtils()->seoIsActive() && ($sTag = $this->getTag()))) {
             $sLink = oxRegistry::get("oetagsSeoEncoderTag")->getTagUrl($sTag, oxRegistry::getLang()->getBaseLanguage());
         }

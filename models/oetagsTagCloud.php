@@ -149,10 +149,13 @@ class oetagsTagCloud extends \oxSuperCfg
      */
     public function formCloudArray(oetagsITagList $oTagList)
     {
+        $sCacheIdent = null;
+        $aCloudArray = null;
+        $myUtils = oxRegistry::getUtils();
+
         // checking if current data is already loaded
         if ($oTagList->getCacheId()) {
             $sCacheIdent = $this->_formCacheKey($oTagList->getCacheId());
-            $myUtils = oxRegistry::getUtils();
             // checking cache
             $aCloudArray = $myUtils->fromFileCache($sCacheIdent);
         }

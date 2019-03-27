@@ -22,7 +22,7 @@ class oetagsSeoEncoderArticle extends oetagsSeoEncoderArticle_parent
     public function getArticleTagUri($oArticle, $iLang, $blRegenerate = false)
     {
         $sSeoUri = null;
-        if ($sTag = $this->_getTag($oArticle, $iLang)) {
+        if ($sTag = $this->_getTag()) {
             $iShopId = $this->getConfig()->getShopId();
 
             $oArticleTags = oxNew('oetagsArticleTagList');

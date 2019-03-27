@@ -68,14 +68,13 @@ class oetagsArticleSeo extends oetagsArticleSeo_parent
      */
     public function getEntryUri()
     {
+        $return = parent::getEntryUri();
         if ('oetag' == $this->getActCatType()) {
             $oProduct = oxNew('oxArticle');
             if ($oProduct->load($this->getEditObjectId())) {
                 $oEncoder = $this->_getEncoder();
                 $return = $oEncoder->getArticleTagUri($oProduct, $this->getActCatLang());
             }
-        } else {
-            $return = parent::getEntryUri();
         }
 
         return $return;
