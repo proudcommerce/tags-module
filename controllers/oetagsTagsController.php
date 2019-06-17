@@ -20,6 +20,8 @@
  * @version   OXID eShop CE
  */
 
+use OxidEsales\EshopCommunity\Core\Registry;
+
 /**
  * Shows bigger tag cloud
  *
@@ -63,6 +65,40 @@ class oetagsTagsController extends \oxubase
         $oTagCloud->setExtendedMode(true);
 
         return $oTagCloud;
+    }
+
+    /**
+     * get Meta Keywords from Config
+     * @return mixed|string
+     */
+    public function getMetaKeywords()
+    {
+        $metaKeywords = parent::getMetaKeywords();
+        $config       = Registry::getConfig();
+        $keywords     = $config->getConfigParam('oetagsMetaKeywords');
+
+        if ($keywords) {
+            $metaKeywords = $keywords;
+        }
+
+        return $metaKeywords;
+    }
+
+    /**
+     * get Meta Description from Config
+     * @return mixed|string
+     */
+    public function getMetaDescription()
+    {
+        $metaDesc    = parent::getMetaDescription();
+        $config      = Registry::getConfig();
+        $description = $config->getConfigParam('oetagsMetaDescription');
+
+        if ($description) {
+            $metaDesc = $description;
+        }
+
+        return $metaDesc;
     }
 
     /**
