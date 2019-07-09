@@ -91,6 +91,8 @@ $aModule = array(
         array('group' => 'main', 'name' => 'oetagsSeparator', 'type' => 'str', 'value' => ','),
         array('group' => 'main', 'name' => 'oetagsUri', 'type' => 'str', 'value' => 'tag'),
         //enter seo url name option, how to multi lang?
+        array('group' => 'main', 'name' => 'oetagsMetaDescription', 'type' => 'str', 'value' => 'Tags Meta Description'),
+        array('group' => 'main', 'name' => 'oetagsMetaKeywords', 'type' => 'str', 'value' => 'keywords'),
     ),
     'events'      => array(
         'onActivate'   => 'oeTagsModule::onActivate',
