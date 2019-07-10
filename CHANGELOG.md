@@ -19,6 +19,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Security
 
+## [2.2.0] - 2019-10-07
+
+### Added
+- added Meta description and keywords fields for the tags overview page
+
 ## [2.1.0] - 2019-19-03
 
 ### Added
