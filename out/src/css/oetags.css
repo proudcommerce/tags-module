@@ -4,6 +4,10 @@
 p.tagCloud, div.tagCloud  {
     line-height: 1.5em;
 }
+#tagsCloud a {
+    margin: 10px;
+    line-height: 1.5em;
+}
 
 a.tagitem_100 {
     font-size:12px;

@@ -12,7 +12,7 @@
 /**
  * Metadata version
  */
-$sMetadataVersion = '1.1';
+$sMetadataVersion = '1.2';
 
 /**
  * Module information
@@ -84,6 +84,15 @@ $aModule = array(
         array('theme' => 'flow', 'template' => 'layout/sidebar.tpl', 'block'=>'sidebar_tags', 'file'=>'views/blocks/flow/sidebar_tags.tpl'),
         array('theme' => 'flow', 'template' => 'page/details/inc/tabs.tpl', 'block'=>'details_tabs_tags', 'file'=>'views/blocks/flow/details_tabs_tags.tpl'),
         array('theme' => 'flow', 'template' => 'page/oetagstagscontroller.tpl', 'block'=>'page_oetagscontroller', 'file'=>'views/blocks/flow/page_oetagscontroller.tpl'),
+
+        //wave
+        // no sidebar here
+        array('theme' => 'wave', 'template' => 'page/details/inc/tabs.tpl', 'block'=>'details_tabs_tags', 'file'=>'views/blocks/wave/details_tabs_tags.tpl'),
+        array('theme' => 'wave', 'template' => 'page/oetagstagscontroller.tpl', 'block'=>'page_oetagscontroller', 'file'=>'views/blocks/wave/page_oetagscontroller.tpl'),
+
+        //custom theme (note: structure needs to be as wave or make own tags module that overrides this module settings)
+        array('template' => 'page/details/inc/tabs.tpl', 'block'=>'details_tabs_tags', 'file'=>'views/blocks/wave/details_tabs_tags.tpl'),
+        array('template' => 'page/oetagstagscontroller.tpl', 'block'=>'page_oetagscontroller', 'file'=>'views/blocks/wave/page_oetagscontroller.tpl'),
 
     ),
     'settings'    => array(

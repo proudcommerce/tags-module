@@ -19,6 +19,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Security
 
+## [2.3.0] - 2020-02-12
+
+### Added
+- added support for Wave & Custom Wave based themes
+- changed labels to buttons for styles, since Bootstrap 4 doesnt have labels anymore.  
+  Buttons are supported by both Bootstrap 3 & 4.
+- upgraded metadata to 1.2
+
 ## [2.2.0] - 2019-10-07
 
 ### Added
