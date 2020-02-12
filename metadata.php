@@ -28,7 +28,7 @@ $aModule = array(
         'en' => 'OE Tags Module',
     ),
     'thumbnail'   => 'out/pictures/picture.png',
-    'version'     => '2.0.1',
+    'version'     => '2.3.0',
     'author'      => 'OXID eSales AG',
     'url'         => 'http://www.oxid-esales.com/',
     'email'       => '',
