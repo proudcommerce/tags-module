@@ -4,8 +4,8 @@
 p.tagCloud, div.tagCloud  {
     line-height: 1.5em;
 }
-#tagsCloud a {
-    margin: 10px;
+#tagsCloud a, .tagCloud a {
+    margin: 5px;
     line-height: 1.5em;
 }
 

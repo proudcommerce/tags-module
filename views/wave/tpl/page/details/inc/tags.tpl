@@ -10,28 +10,28 @@
     <p class="tagCloud">
         [{assign var="oCloudManager" value=$oView->getTagCloudManager()}]
         [{if $oCloudManager->getCloudArray()|count < 0}]
-            [{oxmultilang ident="NO_TAGS"}]
+        [{oxmultilang ident="NO_TAGS"}]
         [{/if}]
         [{foreach from=$oCloudManager->getCloudArray() item="oTag" name="detailsTags"}]
-            <a class="btn btn-primary tagitem_[{$oCloudManager->getTagSize($oTag->getTitle())}]" href="[{$oTag->getLink()}]">[{$oTag->getTitle()}]</a>[{if !$smarty.foreach.detailsTags.last}], [{/if}]
+        <a class="btn btn-info tagitem_[{$oCloudManager->getTagSize($oTag->getTitle())}]" href="[{$oTag->getLink()}]">[{$oTag->getTitle()}]</a>
         [{/foreach}]
     </p>
 
     [{if $oDetailsProduct && $oView->canChangeTags()}]
-        <form action="[{$oViewConf->getSelfActionLink()}]#tags" method="post" id="tagsForm">
-            <div class="hidden">
-                [{$oViewConf->getHiddenSid()}]
-                [{$oViewConf->getNavFormParams()}]
-                <input type="hidden" name="cl" value="[{$oViewConf->getTopActiveClassName()}]">
-                <input type="hidden" name="aid" value="[{$oDetailsProduct->oxarticles__oxid->value}]">
-                <input type="hidden" name="anid" value="[{$oDetailsProduct->oxarticles__oxnid->value}]">
-                <input type="hidden" name="fnc" value="editTags">
-            </div>
-            <div class="form-group">
-                <button class="submitButton btn btn-primary" id="editTag" type="submit">
-                    <i class="fa fa-pencil"></i> [{oxmultilang ident="EDIT_TAGS"}]
-                </button>
-            </div>
-        </form>
+    <form action="[{$oViewConf->getSelfActionLink()}]#tags" method="post" id="tagsForm">
+        <div class="hidden">
+            [{$oViewConf->getHiddenSid()}]
+            [{$oViewConf->getNavFormParams()}]
+            <input type="hidden" name="cl" value="[{$oViewConf->getTopActiveClassName()}]">
+            <input type="hidden" name="aid" value="[{$oDetailsProduct->oxarticles__oxid->value}]">
+            <input type="hidden" name="anid" value="[{$oDetailsProduct->oxarticles__oxnid->value}]">
+            <input type="hidden" name="fnc" value="editTags">
+        </div>
+        <div class="form-group">
+            <button class="submitButton btn btn-primary" id="editTag" type="submit">
+                <i class="fa fa-pencil"></i> [{oxmultilang ident="EDIT_TAGS"}]
+            </button>
+        </div>
+    </form>
     [{/if}]
-[{/if}]
+    [{/if}]
