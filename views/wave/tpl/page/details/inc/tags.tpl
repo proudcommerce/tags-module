@@ -2,7 +2,7 @@
 [{if $oViewConf->showTags($oView) && ( $oView->getTagCloudManager() || ( $oxcmp_user && $oDetailsProduct ) )}]
     [{oxscript include='js/widgets/oxajax.min.js'}]
     [{oxscript include=$oViewConf->getModuleUrl('oetags','out/src/js/widgets/oetag.min.js')}]
-    [{oxscript add="$('p.tagCloud a.tagText').click(oeTag.highTag);"}]
+    [{oxscript add="if($('p.tagCloud a.tagText')){ $('p.tagCloud a.tagText').click(oeTag.highTag); }"}]
     [{oxscript add="$('#saveTag').click(oeTag.saveTag);"}]
     [{oxscript add="$('#cancelTag').click(oeTag.cancelTag);"}]
     [{oxscript add="$('#editTag').click(oeTag.editTag);"}]
