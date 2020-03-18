@@ -19,6 +19,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Security
 
+## [2.3.1] - 2020-03-18
+
+### Fixed
+- fixed javascript when no tags are set, broke f.e. variants selection
+
 ## [2.3.0] - 2020-02-12
 
 ### Added
