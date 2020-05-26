@@ -12,9 +12,6 @@
     "oxideshop": {
       "target-directory": "oe/oetags",
       "oxid-esales/oxideshop-ce": "^v6"
-    },
-    "branch-alias": {
-      "dev-master": "2.3.x-dev"
     }
   }
 }
